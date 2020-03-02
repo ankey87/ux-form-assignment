@@ -1,2 +1,118 @@
-
 /*  Put your CSS Here */
+
+.gradient-background {
+    background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
+    background: -webkit-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
+    background: -moz-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
+    background: -o-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
+    background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+.card {
+    background-color: black;
+    color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.card-header {
+    height: 18rem;
+}
+.card-header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card-body {
+    padding: 2rem 1.2rem;
+}
+.card-title {
+    font-size: 1.4rem;
+}
+.form-field {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(204, 204, 204, 0.331);
+}
+.form-field input, 
+.form-field select {
+    width: 100%;
+    height: 2.5rem;
+    background-color: black;
+    color: white;
+    font-family: "Poppins";
+}
+.form-field input::placeholder, 
+.form-field select::placeholder,
+.form-field select:invalid{
+    color: #ccc;
+}
+.select-field {
+    position: relative;
+}
+.select-field::after {
+    content: '>';
+    font: 17px "Consolas", monospace;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    pointer-events: none;
+    right: 0.5rem;
+    top: 1.1rem;
+    font-size: 0.5rem;
+    color: #ccc;
+}
+.submit-btn {
+    width: 6rem;
+    height: 2rem;
+    background-color: rgb(18, 211, 13);
+    color: white;
+    border-radius: 1rem;
+    font-family: "Poppins";
+    font-size: 0.8rem;
+}
+@media (min-width: 787px) {
+    .card {
+        display: flex;
+        max-width: 760px;
+    }
+    .card-header, 
+    .card-body {
+        width: 50%;
+    }
+    .card-header {
+        min-height: 35rem;
+    }
+    .card-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .card-body {
+        padding: 3rem 3.5rem;
+    }
+    .submit-btn {
+        height: 2.5rem;
+        border-radius: 2rem;
+        width: 8.5rem;
+        font-size: 1.2rem;
+    }
+    .form-field input, 
+    .form-field select {
+        font-size: 1rem;
+    }
+    .form-field {
+        margin-bottom: 2rem;
+    }
+}
